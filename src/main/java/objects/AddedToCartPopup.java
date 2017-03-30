@@ -13,8 +13,7 @@ public class AddedToCartPopup extends BaseObject {
 	public AddedToCartPopup() {
 		super(null);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.presenceOfElementLocated(containerIdentifier));
-		element = driver.findElement(containerIdentifier);
+		element = wait.until(ExpectedConditions.presenceOfElementLocated(containerIdentifier));
 	}
 
 	public String getMessage() {
